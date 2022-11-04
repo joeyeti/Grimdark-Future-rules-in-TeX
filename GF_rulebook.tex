@@ -1,0 +1,1571 @@
+\documentclass[9pt, a4paper, bookmarks=false]{extarticle}            %% A4 paper size, default font size 9 pts.
+\usepackage[utf8]{inputenc}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{float}                                  %% package to allow floating objects
+\usepackage[export]{adjustbox}                      %% package to help adjust boxes
+\usepackage{incgraph,tikz}                          %% incgraph provides tools for including graphics on full paper size, tikz package is used for graphics
+\usepackage[top=1.3cm, bottom=2cm, left=1.2cm, right=1.2cm]{geometry}       %% page margins
+\usepackage{flafter}                                %% floats always appear after their definition
+\usepackage{multicol}                               %% package for multicolumn layout
+\setlength{\columnsep}{0.6cm}                       %% column separation
+\usepackage{graphicx}                               %% package to manage images
+\graphicspath{ {./images/} }                        %% local image path
+
+\usepackage{enumitem}                               %% package to allow list/description style modification
+\setlist[itemize]{itemsep=0pt, topsep=0pt}          %% bulleted list space before and after each item
+\setlist[enumerate]{itemsep=0pt, topsep=0pt}        %% numbered list space before and after each item
+\parskip=7pt                                        %% space after each paragraph
+\parindent=0pt                                      %% suppress indentation of the first sentence in each paragraph
+\setcounter{secnumdepth}{0}                         %% suppress numbering Sections/Subsections in the text
+
+\input{glyphtounicode}                              %% convert gliphs to unicode - selectable/copyiable
+\pdfgentounicode=1                                  %% see above...
+
+\date{}                            %% suppress showing the Date on the Title page
+
+\usepackage{titlesec}              %% package to deal with sections/subsections etc.
+\titlespacing*{\section}           %% space before and after each Section
+{0pt}{6pt}{6pt}                    %% left before after
+\titlespacing*{\subsection}        %% space before and after each Subsection
+{0pt}{6pt}{6pt}                    %% left before after
+\titleformat*{\section}{\fontsize{16}{0}\selectfont}        %% enlarge the "section" font to 16 with 0 increase in space afterwards
+\titlespacing{\section}{0pt}{*1}{*0.9}          %% space after "section" - left indent, before, after
+\titlespacing{\subsection}{0pt}{*0.9}{*0.9}     %% space after "section" - left indent, before, after
+
+\usepackage{titling}
+\setlength{\droptitle}{-1.5cm}     %% moving the Title upwards
+
+\usepackage[pages=all,firstpage=false]{background}
+
+\backgroundsetup{                   %% background image setup - all but Page 1
+scale=1,
+color=black,
+opacity=1,
+angle=0,
+contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{GF_rulebook_background.png}
+  }%
+}
+
+\usepackage{hyperref}                               %% hyperlink formatting package
+%% \usepackage{bookmark}
+
+\hypersetup{                                        %% hyperlink formatting setup
+    pdfstartview={XYZ null null 1.00},              %% open PDF in 100% zoom
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    linktoc=none,
+    pdfborderstyle={/S/U/W 2}
+}
+
+\setlength{\footskip}{1.4cm}        %% longer distance between text and Page numbering / foot
+
+\title{\Huge Grimdark Future \normalsize v2.16\vspace{-7em}}
+
+
+
+%% ---- Page 01 ---- %%
+
+\begin{document}
+
+\incgraph[documentpaper][width=\paperwidth,height=\paperheight]{images/GF_rulebook_page_01.png}
+                                %% above is the cover picture for the PDF
+
+\raggedright                    %% disable text justification
+
+\newpage
+
+%% ---- Page 02 ---- %%
+
+\maketitle
+
+\begin{multicols}{2}
+
+\pdfbookmark[2]{Introduction}{Introduction}
+\subsection{Introduction}
+
+Grimdark Future is a miniature wargame set in a war-torn sci-fi future, which is played using 28mm miniatures.
+
+The game mechanics are designed to be easy to learn but hard to master, bringing engaging sci-fi battles for new and experienced players alike.
+
+This rulebook is divided into 3 sections:
+
+\begin{itemize}
+  \item \textbf{Basic Rules} - Everything you need to play the game, with plenty of diagrams and examples.
+  \item \textbf{Advanced Rules} - Extra rules that you can use on top of the basic rules to spice up the game.
+  \item \textbf{Total Conversions} - Rules that radically modify the base rules and provide a new experience.
+\end{itemize}
+
+We recommend that you start off by playing with just a few advanced rules first, and then gradually add more as you get more comfortable with them.
+
+Once you feel like you’ve gained a good understanding of the game, you can then try out the total conversions, which provide a radically different experience from the base rules.
+
+\pdfbookmark[2]{About OPR}{About OPR}
+\subsection{About OPR}
+
+OPR (\href{http://www.onepagerules.com}{www.onepagerules.com}) is the home of many free games which are designed to be fast to learn and easy to play.
+
+This project was made by gamers for gamers and it can only exist thanks to the support of our awesome community.
+
+If you’d like to support the continued development of our games you can donate on patreon.com/onepagerules.
+
+\subsection{Thank you for playing!}
+\vspace{10 mm}
+
+\begin{center}
+  \includegraphics [width=7cm]{GF_rulebook_page_02.png}
+\end{center}
+
+\subsection{Contents}
+
+\textbf{Basic Rules} \dotfill 3
+
+\hspace{1cm}General Principles \dotfill 3
+
+\hspace{1cm}Preparation \dotfill 5
+
+\hspace{1cm}Playing the Game \dotfill 6
+
+\hspace{1cm}Movement \dotfill 7
+
+\hspace{1cm}Shooting \dotfill 8
+
+\hspace{1cm}Melee \dotfill 9
+
+\hspace{1cm}Morale \dotfill 11
+
+\hspace{1cm}Terrain \dotfill 12
+
+\hspace{1cm}Special Rules \dotfill 14
+
+\textbf{Advanced Rules} \dotfill 16
+
+\hspace{1cm}Terrain Placement \dotfill 16
+
+\hspace{1cm}Deployment Styles \dotfill 17
+
+\hspace{1cm}Extra Missions \dotfill 18
+
+\hspace{1cm}Side-Missions \dotfill 19
+
+\hspace{1cm}Extra Actions \dotfill 20
+
+\hspace{1cm}Solid Buildings \dotfill 21
+
+\hspace{1cm}Random Events \dotfill 22
+
+\hspace{1cm}Battlefield Conditions \dotfill 23
+
+\hspace{1cm}Terrain \& Objective Effects \dotfill 24
+
+\textbf{Total Conversions} \dotfill 25
+
+\hspace{1cm}Fog of War \dotfill 25
+
+\hspace{1cm}Brutal Damage \dotfill 26
+
+\hspace{1cm}Command Points \dotfill 27
+
+\hspace{1cm}Suppression \dotfill 28
+
+\hspace{1cm}Multiplayer Games \dotfill 29
+
+\hspace{1cm}Apocalyptic Games \dotfill 30
+
+\hspace{1cm}Kitchen Table Games \dotfill 31
+
+\hspace{1cm}Small-Scales \& Multi-Basing \dotfill 32
+
+\end{multicols}
+
+\vfill
+\textbf{Game Design}: Gaetano Ferrara
+
+\textbf{Illustrations}: Brandon Gillam
+
+\newpage
+
+
+%% ---- Page 03 ---- %%
+
+\pdfbookmark[0]{Basic Rules}{Basic Rules}
+\pdfbookmark[1]{General Principles}{General Principles}
+\section{General Principles}
+
+\begin{multicols}{2}
+
+\pdfbookmark[2]{The Most Important Rule}{The Most Important Rule}
+\subsection{The Most Important Rule}
+
+When playing a complex game there are going to be occasions where a situation is not covered by the rules, or a rule does not seem quite right. When that is the case use common sense and personal preference to resolve the situation.
+
+If you and your opponent cannot agree on how to solve a situation, use the following method in the interest of time.
+
+Roll one die. On a result of 1-3 player A decides, and on a result of 4-6 player B decides. This decision then applies for the rest of the match, and once the game is over you can continue to discuss the finer details of the rules.
+
+\pdfbookmark[2]{Scale Conventions}{Scale Conventions}
+\subsection{Scale Conventions}
+
+This game was written to be played with 28mm heroic-scale miniatures in mind, which are mounted on round bases.
+
+These bases come in various sizes, and we recommend that you always mount miniatures on the bases they come with.
+
+Here are some general guidelines for base sizes:
+
+\begin{itemize}
+  \item \textbf{Infantry}: 20mm to 40mm
+  \item \textbf{Bikes \& Beasts}: 25mm x 70mm
+  \item \textbf{Monsters \& Walkers}: 60mm
+  \item \textbf{Vehicles}: Not mounted on a base
+\end{itemize}
+
+Note that the base size that you use doesn’t matter, as long as you keep base sizes consistent across all models.
+
+\pdfbookmark[2]{Models \& Units}{Models \& Units}
+\subsection{Models \& Units}
+
+In the rules, individual miniatures are referred to as models, whilst groups of one or more models are referred to as units.
+
+This means that when a rule applies to a unit it applies to all miniatures within that unit, whilst if a rule applies to a model it only applies to one individual miniature.
+
+\pdfbookmark[2]{Unit Stats}{Unit Stats}
+\subsection{Unit Stats}
+
+Units come with a variety of statistics that define who they are and what they can do.
+
+\begin{itemize}
+  \item \textbf{Name [Size]}: The unit name and number of models.
+  \item \textbf{Quality}: The score needed for attacks and morale.
+  \item \textbf{Defense}: The score needed for defense.
+  \item \textbf{Equipment}: Any weapons and gear the unit has.
+  \item \textbf{Special Rules}: Any special rules the unit has.
+  \item \textbf{Upgrades}: What upgrade lists it has access to.
+  \item \textbf{Cost}: How many points it costs to take this unit.
+\end{itemize}
+
+\columnbreak
+
+\pdfbookmark[2]{Dice}{Dice}
+\subsection{Dice}
+
+To play the game you are going to need some six-sided dice, which we will refer to as D6. Depending on how many models you are playing with, we recommend having at least 10 to 20 dice to keep things fast.
+
+Additionally, we recommend having dice of multiple colors so that you can combine them for faster rolling. Whenever a unit is using multiple weapons, you can use different colors for each weapon, and then roll them all at once.
+
+Sometimes the rules will refer to different types of dice, for example D3, 2D6 and D6+1. There are many types of dice, but the notation remains the same, so just apply the following explanations to all types of weird dice you come across.
+\begin{itemize}
+  \item \textbf{D3}: To use these dice, simply roll a D6 and halve the result, rounding up.
+  \item \textbf{2D6}: To use these dice, simply roll two D6 and sum the results of both dice.
+  \item \textbf{D6+1}: To use these dice, simply roll a D6 and add 1 to the result.
+\end{itemize}
+
+\pdfbookmark[2]{Re-Rolls}{Re-Rolls}
+\subsection{Re-Rolls}
+
+Whenever a rule tells you to re-roll a dice result, simply pick up the number of dice you have to re-roll, and roll them again. The result of the second roll is the final result, even if it’s worse than the first. A die roll may only be re-rolled once, regardless of how many rules apply to it.
+
+\pdfbookmark[2]{Roll-Offs}{Roll-Offs}
+\subsection{Roll-Offs}
+
+Whenever a rule tells you to roll-off, all players involved in the roll-off must roll one die, and then compare their results. The player with the highest result wins the roll-off, and in the event of a tie the players must re-roll until there is a winner.
+
+\pdfbookmark[2]{Quality Tests}{Quality Tests}
+\subsection{Quality Tests}
+
+During the game you will be required to take Quality tests in order to see if a unit succeeds at doing various things such as hitting its targets or passing morale tests.
+
+Whenever a rule states that a unit must take a Quality test, roll one die. If you score the unit’s Quality value or higher, then it counts as a success, else it counts as a fail.
+
+\textit{Example: A model with Quality 4+ must take three Quality tests. The player rolls three dice and scores a 3, a 4 and a 5. This means that the model gets two successes (the 4 and the 5), and one fail (the 3).}
+
+\end{multicols}
+
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=south, %anchor is lower right corner of the graphic
+      xshift=0cm, %shifting around
+      yshift=1cm] 
+     at (current page.south) %lower right corner of the page
+     {\includegraphics[width=8cm]{GF_rulebook_page_03.png}}; 
+\end{tikzpicture}
+
+\newpage
+
+
+%% ---- Page 04 ---- %%
+
+\vspace*{0.2cm}
+
+\begin{multicols*}{2}
+
+\pdfbookmark[2]{Modifiers}{Modifiers}
+\subsection{Modifiers}
+
+Throughout the game there are going to be rules that apply modifiers to your die rolls. These will usually raise or lower the value of a unit’s roll results by either +1 or -1, but the exact number may vary.
+
+Whenever a modifier applies to one of your rolls, simply add or subtract the value from the roll and the new value counts as the final result, however a roll of 6 always counts as a success and a roll of 1 always counts as a fail, regardless of how much it is being modified by.
+
+\textit{Example: A model with Quality 4+ must take three Quality tests with a -1 modifier. The player rolls three dice and scores a 3, 4 and 5. Because of the modifier the final result is a 2, a 3 and a 4. This means that the model gets one success (the 4), and two fails (the 2 and the 3).}
+
+\pdfbookmark[2]{Weapons}{Weapons}
+\subsection{Weapons}
+
+All weapons in the game are separated into two categories: ranged weapons and melee weapons. Ranged weapons have a range value and can be used for shooting, whilst melee weapons don’t have a range value and can be used in melee.
+
+Weapons profiles are represented like this:
+\begin{itemize}
+  \item \textbf{Name} (Range, Attacks, Special Rules)
+\end{itemize}
+
+\textit{Example: Heavy Rifle (24”, A1, AP(1))}
+
+\pdfbookmark[2]{Measuring Distances}{Measuring Distances}
+\subsection{Measuring Distances}
+
+To play the game you are going to need a ruler marked in inches, which you may use to measure distances at any time.
+
+Distances are usually measured from a model’s base, however if a model has no base, then all distances are measured from its hull or torso.
+
+When measuring the distance between two models you always measure from/to the closest point of their bases.
+
+When measuring the distance between two units you always measure from/to the closest model in each unit.
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_04_01.png}
+\end{center}
+
+\columnbreak
+
+\pdfbookmark[2]{Measuring Movement}{Measuring Movement}
+\subsection{Measuring Movement}
+
+When measuring how far a model moves always measure so that no part of its base moves further than the total distance.
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_04_02.png}
+\end{center}
+
+Note that whilst all examples here show round bases, these movement restrictions apply in the same way to models on bases of different shape or models without a base.
+
+\pdfbookmark[2]{Line of Sight (LoS)}{Line of Sight (LoS)}
+\subsection{Line of Sight (LoS)}
+
+Unless stated otherwise, models can see in all directions, regardless of where the miniature is actually facing.
+
+To determine if a model has line of sight to another model, simply draw a straight line from one model’s base to the other, and if the line doesn’t pass through any solid obstacle (including other units), then it has line of sight.
+
+For the purpose of determining line of sight, a model may always ignore friendly models from its own unit.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_04_03.png}
+\end{center}
+
+\vfill\null
+
+\end{multicols*}
+
+\newpage
+
+
+%% ---- Page 05 ---- %%
+
+\pdfbookmark[1]{Preparation}{Preparation}
+\section{Preparation}
+
+\begin{multicols}{2}
+
+\pdfbookmark[2]{Preparing the Battlefield}{Preparing the Battlefield}
+\subsection{Preparing the Battlefield}
+
+You are going to need a flat 6’x4’ surface to play on, which is usually referred to as “the battlefield” or “the table”.
+
+Whilst we recommend playing on a table, you can of course play on the floor, on a bed, or wherever else you have space.
+
+Once you have found a space to play, you are going to have to place at least 10 pieces of terrain on it, though we recommend using 15 or more to keep things interesting.
+
+Whilst it’s always nice to play with great looking pieces of terrain, you can simply use household items such as books or cups as terrain pieces.
+
+There are no specific rules on how you should place terrain, so we recommend trying to set up the table in such a way that it will provide a balanced playing field for everyone involved.
+
+Ideally you want to place enough blocking terrain that you can’t draw clear line of sight from edge to edge across the table, as well as place a variety of cover and difficult terrain so that there are no gaps bigger than 12” between terrain pieces.
+
+\pdfbookmark[2]{Placing Objectives}{Placing Objectives}
+\subsection{Placing Objectives}
+
+After the table has been prepared, you and your opponent must set up D3+2 objective markers on the battlefield.
+The players roll-off and the winner picks who places the first objective marker. Then the players alternate in placing one marker each outside of the deployment zones, and over 9” away from other markers.
+
+\pdfbookmark[2]{The Mission}{The Mission}
+\subsection{The Mission}
+
+At the end of each round, if a unit is within 3” of a marker whilst no enemies are, then it counts as being seized.
+Markers remain seized even if the unit moves away, however Pinned units can’t seize or stop others from seizing them.
+
+If units from both sides contest a marker at the end of a round then it becomes neutral.
+
+After 4 rounds have been played, the game ends, and the player that controls most markers wins.
+
+\pdfbookmark[2]{Preparing your Army}{Preparing your Army}
+\subsection{Preparing your Army}
+
+Before the game begins, you and your opponent are going to have to agree on what size of game you want to play.
+For a start we recommend playing with armies worth 750pts each, and once you have gotten familiar with the game, you can start playing with bigger armies.
+
+To put your army together, simply select units and upgrades from your army’s list, and sum together their total point cost.
+
+There are no limitations as to how many units you can take, as long as their total point cost doesn’t go over the agreed limit.
+
+\columnbreak
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_05_01.png}
+\end{center}
+
+\pdfbookmark[2]{Combined Units}{Combined Units}
+\subsection{Combined Units}
+
+When preparing your army, you may combine two copies of the same unit into a single big unit, as long as any upgrades that are applied to all models are bought for both.
+
+\textit{Example: A unit of Battle Brothers with Assault Rifles cannot be merged with a unit of Battle Brothers with Pistols and CCWs, because they have two different upgrades that are applied to all models in the unit.}
+
+\pdfbookmark[2]{Deploying Armies}{Deploying Armies}
+\subsection{Deploying Armies}
+
+Once the mission has been set up, the players roll-off and the winner must start deploying their army first.
+The winning player first chooses one long table edge to deploy on and then places one unit fully within 12” of their table edge.
+
+Once they are done, then the opposing player places one unit fully within 12” of the opposite table edge.
+Then the players continue alternating in placing one unit each, until all units have been deployed.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_05_02.png}
+\end{center}
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 06 ---- %%
+
+\pdfbookmark[1]{Playing the Game}{Playing the Game}
+\section{Playing the Game}
+
+\begin{multicols}{2}
+
+\pdfbookmark[2]{Rounds, Turns \& Activations}{Rounds, Turns \& Activations}
+\subsection{Rounds, Turns \& Activations}
+
+The game is structured into game rounds, player turns and unit activations. Here is the breakdown of what these mean:
+
+\begin{itemize}
+  \item \textbf{Rounds}: Each round is made up of multiple turns.
+  \item \textbf{Turns}: Each turn is made up of a single activation.
+  \item \textbf{Activations}: Each activation is made up of an action.
+\end{itemize}
+
+\pdfbookmark[2]{Game Structure}{Game Structure}
+\subsection{Game Structure}
+
+After both players have deployed their armies, the game starts with the first round and the player that won the deployment roll-off takes the first turn.
+
+During their turn, the player picks a unit that has not been activated yet, and activates it by performing an action.
+
+Once the action has been taken, their turn ends, and the opposing player’s turn starts. This continues until all units have activated, at which point the round ends and a new one begins.
+
+On each new round the player that finished activating first on the last round gets to activate first.
+
+After 4 full rounds have been played the game ends, and players determine who won, by checking if they completed their mission objectives.
+
+\pdfbookmark[2]{Activating Units}{Activating Units}
+\subsection{Activating Units}
+
+Players may activate one unit that has not been activated yet and take one action.
+
+Here are all available actions and what they allow a unit to do:
+
+\begin{itemize}
+  \item \textbf{Hold:} The unit may shoot.
+  \item \textbf{Advance}: The unit moves by up to 6” and may only shoot after moving.
+  \item \textbf{Rush}: The unit moves by up to 12” but it may not shoot at any point.
+  \item \textbf{Charge}: The unit moves by up to 12” to get into base contact with the enemy but it may not shoot at any point. Note that units may only use charge actions if at least one model is able to get into base contact with the target.
+\end{itemize}
+
+\vfill
+
+\columnbreak
+
+\vfill\null
+
+\end{multicols}
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=south east, %anchor is lower right corner of the graphic
+      xshift=-1.5cm, %shifting around
+      yshift=1cm] 
+     at (current page.south east) %lower right corner of the page
+     {\includegraphics[width=8cm]{GF_rulebook_page_06.png}}; 
+\end{tikzpicture}
+
+\newpage
+
+
+%% ---- Page 07 ---- %%
+
+\pdfbookmark[1]{Movement}{Movement}
+\section{Movement}
+
+\begin{multicols}{2}
+
+\pdfbookmark[2]{Unit Coherency}{Unit Coherency}
+\subsection{Unit Coherency}
+
+Units that consist of two or more models must always maintain unit coherency.
+
+All models in the unit must stay within 2” of at least one other model at all times, and all models must stay within 6” of all other models at all times (or as close as possible).
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_07_01.png}
+\end{center}
+
+If a model is not in coherency with its unit at the beginning of its activation, then you must take an action so that the model gets back into coherency.
+
+\vfill\null
+
+\columnbreak
+
+\pdfbookmark[2]{Holding}{Holding}
+\subsection{Holding}
+
+When taking a Hold action, the models in the unit may not move or turn in any direction.
+
+\pdfbookmark[2]{Advancing}{Advancing}
+\subsection{Advancing}
+
+When taking an Advance action, all models in the unit may move by up to 6”. Models may move and turn in any direction regardless of their facing, as long as no part of their bases move further than the total movement distance.
+
+Models may not move within 1” of models from other units (friendly or enemy), unless they are taking a Charge action.
+
+Note that models may never move through other models or units, even if they are taking a Charge action.
+
+\pdfbookmark[2]{Rushing}{Rushing}
+\subsection{Rushing}
+
+When taking a Rush action, all models in the unit may move by up to 12”. The same rules about turning, facing and keeping 1” distance apply to Rush actions.
+
+\pdfbookmark[2]{Charging}{Charging}
+\subsection{Charging}
+
+When taking a Charge action, all models in the unit may move by up to 12”. Models taking a Charge action may ignore the 1” distance restriction, however since this is a little more complex it will be explained in detail in the Melee section.
+
+Note that units may only take a Charge action if their move would bring at least one model into base contact with another model from the target unit.
+
+\end{multicols}
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=south east, %anchor is lower right corner of the graphic
+      xshift=-1.2cm, %shifting around
+      yshift=1.2cm] 
+     at (current page.south east) %lower right corner of the page
+     {\includegraphics[width=10cm]{GF_rulebook_page_07_02.png}}; 
+\end{tikzpicture}
+
+\newpage
+
+
+%% ---- Page 08 ---- %%
+
+\pdfbookmark[1]{Shooting}{Shooting}
+\section{Shooting}
+
+\begin{multicols}{2}
+
+\pdfbookmark[2]{Picking Targets}{Picking Targets}
+\subsection{Picking Targets}
+
+When taking a Shooting action, a unit must pick one valid target and all models in the unit may shoot at it.
+
+If at least one model in the unit has line of sight to an enemy model, and has a weapon that is within range of that model, then that enemy is a valid target.
+
+\pdfbookmark[2]{Who Can Shoot}{Who Can Shoot}
+\subsection{Who Can Shoot}
+
+All models in a unit that have line of sight to the target unit and that have a weapon that is within range of that unit may fire.
+
+For the purpose of determining line of sight a model may always ignore friendly models from its own unit.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_08_01.png}
+\end{center}
+
+\textit{Example: In the image above only the three Battle Brothers in the middle can shoot at the Orcs. The model at the top is in range but has no line of sight, whilst the model at the bottom has line of sight but is out of range.}
+
+\pdfbookmark[2]{Multiple Weapon Types}{Multiple Weapon Types}
+\subsection{Multiple Weapon Types}
+
+If a unit is firing multiple weapon types, then you may separate each weapon type into its own weapon group.
+
+Each weapon group may fire at a different target, however all weapons from the same group must fire at the same target.
+
+Note that the target for each weapon group must be declared before rolling, and all weapons are fired simultaneously.
+
+\textit{Example: A unit of Battle Brothers is armed with Assault Rifles and a Missile Launcher. Since it has two weapon types, the Battle Brothers can fire all the Assault Rifles at a nearby Orc squad and the Missile Launcher at a distant Battle Truck.}
+
+\pdfbookmark[2]{The Shooting Sequence}{The Shooting Sequence}
+\subsection{The Shooting Sequence}
+
+Shooting is done in a simple sequence which has to be followed separately for each weapon group:
+
+\begin{enumerate}
+  \item Determine Attacks
+  \item Roll to Hit
+  \item Roll to Block
+  \item Remove Casualties
+\end{enumerate}
+
+\columnbreak
+
+\pdfbookmark[2]{1. Determine Attacks}{1. Determine Attacks}
+\subsection{1. Determine Attacks}
+
+Each ranged weapon has an Attack value which represents its overall firepower.
+
+Sum the Attack value from the weapons of all models that can shoot at the target to determine how many attacks the unit has in total for this shooting.
+
+\textit{Example: A unit of five Battle Brothers is shooting at a unit of Orcs. Three Battle Brothers with Assault Rifles (Attack 1) are within range and line of sight of the Orcs, which means the unit has a total of 3 attacks for this shooting.}
+
+\pdfbookmark[2]{2. Roll to Hit}{2. Roll to Hit}
+\subsection{2. Roll to Hit}
+
+After having determined how many attacks the unit has in total, take as many Quality tests as attacks.
+
+Each successful roll counts as a hit, and all failed rolls are discarded with no effect.
+
+\textit{Example: The three Battle Brothers (Quality 3+) are shooting at the Orcs. They take three Quality tests and roll a 2, a 3 and a 4. This means that they score a total of 2 hits.}
+
+\pdfbookmark[2]{3. Roll to Block}{3. Roll to Block}
+\subsection{3. Roll to Block}
+
+For every hit that the unit has taken, the defending player must roll one die, trying to score the target unit’s Defense value.
+
+Each success counts as a block, and all failed rolls cause one wound each.
+
+\textit{Example: The unit of Orcs (Defense 5+) has taken two hits. They roll two dice and get a 4 and a 5. This means that the Orcs have blocked 1 hit and taken 1 wound.}
+
+\pdfbookmark[2]{4. Remove Casualties}{4. Remove Casualties}
+\subsection{4. Remove Casualties}
+
+For each wound that the unit has taken, the defending player must remove one model as a casualty.
+
+The defending player may remove models from the target in any order, keeping unit coherency in mind.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_08_02.png}
+\end{center}
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 09 ---- %%
+
+\pdfbookmark[1]{Melee}{Melee}
+\section{Melee}
+
+\begin{multicols}{2}
+
+\pdfbookmark[2]{Picking Targets}{Picking Targets}
+\subsection{Picking Targets}
+
+
+When taking a Charge action, a unit must pick one valid target and all models in the unit must charge it.
+If at least one model in the unit is within 12” of one model from the target unit, and has a clear path to reach it, then that enemy is a valid target.
+
+\pdfbookmark[2]{Charge Moves}{Charge Moves}
+\subsection{Charge Moves}
+
+To charge, you must move charging models by up to 12” to get into base contact with an enemy model from the target unit, or as close as possible to an enemy model from the target unit, maintaining unit coherency.
+
+Once all charging models have moved, all models from the target unit that are not in base contact with a charging model must move by up to 3” to get into base contact with a charging model, or as close as possible to an enemy model from the charging unit, maintaining unit coherency.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_09_01.png}
+\end{center}
+
+\pdfbookmark[2]{Who Can Strike}{Who Can Strike}
+\subsection{Who Can Strike}
+
+All models in a unit that are in base contact with an enemy model from the target unit, or that are within 2” of a model from the target unit, may attack it.
+
+Models may strike with all of their melee weapons, and may only strike at models from the target unit.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_09_02.png}
+\end{center}
+
+\columnbreak
+
+\pdfbookmark[2]{The Melee Sequence}{The Melee Sequence}
+\subsection{The Melee Sequence}
+
+Melee is done in a simple sequence which has to be followed separately for the charging unit and the target unit:
+
+\begin{enumerate}
+  \item Determine Attacks
+  \item Roll to Hit
+  \item Roll to Block
+  \item Remove Casualties
+\end{enumerate}
+
+\pdfbookmark[2]{1. Determine Attacks}{1. Determine Attacks}
+\subsection{1. Determine Attacks}
+
+Each melee weapon has an Attack value which represents its overall strength.
+
+Sum the Attack value from the weapons of all models that can strike at the target to determine how many attacks the unit has in total for this melee.
+
+\textit{Example: A unit of five Battle Brothers is charging a unit of Orcs. Three of the Battle Brothers armed with CCWs (Attack 1) are in range of the Orcs, which means the unit has a total of 3 attacks for this melee.}
+
+\pdfbookmark[2]{2. Roll to Hit}{2. Roll to Hit}
+\subsection{2. Roll to Hit}
+
+After having determined how many attacks the unit has in total, take as many Quality tests as attacks.
+
+Each successful roll counts as a hit, and all failed rolls are discarded with no effect.
+
+\textit{Example: The three Battle Brothers (Quality 3+) are striking at the Orcs. They take three Quality tests and roll a 2, a 3 and a 4. This means that they score a total of 2 hits.}
+
+\pdfbookmark[2]{3. Roll to Block}{3. Roll to Block}
+\subsection{3. Roll to Block}
+
+For every hit that the unit has taken, the defending player must roll one die, trying to score the target unit’s Defense value.
+
+Each success counts as a block, and all failed rolls cause one wound each.
+
+\textit{Example: The unit of Orcs (Defense 5+) has taken two hits. They roll two dice and get a 4 and a 5. This means that the Orcs have blocked 1 hit and taken 1 wound.}
+
+\pdfbookmark[2]{4. Remove Casualties}{4. Remove Casualties}
+\subsection{4. Remove Casualties}
+
+For each wound that the unit has taken, the defending player must remove one model as a casualty.
+
+The defending player may remove models from the target in any order, keeping unit coherency in mind.
+
+\pdfbookmark[2]{Return Strikes}{Return Strikes}
+\subsection{Return Strikes}
+
+Once all charging models that were able to attack have done so, the defending unit may choose to strike back (following the melee sequence again), but doesn’t have to.
+
+\pdfbookmark[2]{Fatigue}{Fatigue}
+\subsection{Fatigue}
+
+After attacking in melee for the first time during a round, either by charging or by striking back, units only hit on unmodified rolls of 6 in any subsequent melee until the end of the round.
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 10 ---- %%
+
+\vspace*{0.2cm}
+
+\begin{multicols}{2}
+
+\pdfbookmark[2]{Combat Resolution}{Combat Resolution}
+\subsection{Combat Resolution}
+
+Once the defender has struck back (or not if they chose not to strike back), you need to determine who won the melee.
+
+Sum the total number of wounds that each unit caused, and compare the two.
+
+If one unit caused more wounds than the other, then it counts as the winner, and the opposing unit must take a morale test.
+
+Note that in melee only the loser takes a morale test, regardless of casualties.
+
+If the units are tied for how many wounds they caused, or neither unit caused any wounds, then the combat is a tie and neither unit must take a morale test.
+
+This means that if a unit didn’t strike back in melee, then it must only take a morale test if it suffered at least one wound.
+
+\textit{Example: A unit of Battle Brothers charges a unit of Orcs. The Battle Brothers inflict 2 wounds in that melee, whilst the Orcs only inflict 1 wound. Since the Battle Brothers caused more wounds the Orcs have lost and must take a morale test.}
+
+\subsection{Consolidation Moves}
+
+After determining who won the combat, the charging unit makes consolidation moves.
+
+If the defending unit was not completely destroyed, then the charging unit must move back by 1”, separating itself from the defending unit.
+
+If either unit was completely destroyed by removing all models as casualties, or by routing due to a failed morale test, then the other unit may move by up to 3”.
+
+\vfill\null
+
+\columnbreak
+
+\vfill\null
+
+\end{multicols}
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=south east,                        %%anchor is lower right corner of the graphic
+      xshift=-1.2cm,                            %% shifting around
+      yshift=1.2cm] 
+     at (current page.south east)               %% lower right corner of the page
+     {\includegraphics[width=12cm]{GF_rulebook_page_10.png}}; 
+\end{tikzpicture}
+
+\newpage
+
+
+%% ---- Page 11 ---- %%
+
+\section{Morale}
+
+\begin{multicols}{2}
+
+\subsection{When to Test}
+
+As units take casualties, their psychological well-being deteriorates, and they will be pinned by enemy fire or flee from the battlefield.
+
+Whenever it takes wounds that leave it with half or less of its starting size or tough value (for units with a single model), or whenever is loses a melee, then it must take a morale test.
+
+\textit{Example: A unit of Battle Brothers shoots at a unit of 10 Orcs and manages to kill 5 models. Since half of the Orcs were killed the unit must take a morale test.}
+
+\subsection{Taking Morale Tests}
+
+To take a morale test, the affected unit must simply take one regular Quality test.
+
+If the roll is successful nothing happens, however if the roll is unsuccessful, then there are different results based on the situation that the unit is in:
+
+\begin{itemize}
+  \item If the unit has taken the morale test because it lost models outside of melee, then it is Pinned.
+  \item If the unit has taken the morale test because it lost in melee and it still has over half as many models or tough value (for units with a single model) as it started the game with, then it is Pinned.
+  \item If the unit has taken the morale test because it lost in melee and it has half or less as many models or tough value (for units with a single model) as it started the game with, then it Routs.
+\end{itemize}
+
+\vfill\null
+
+\columnbreak
+
+\subsection{Pinned Units}
+
+Pinned units only hit on unmodified rolls of 6 in melee and automatically fail morale tests as long as they are pinned.
+
+When a Pinned unit is activated it must spend its activation being idle and may do nothing, which stops it from being Pinned at the end of its activation.
+
+\subsection{Routed Units}
+
+Routed units have lost all hope and are taken captive, flee the battle, or are otherwise rendered ineffective.
+
+Simply remove the entire unit from the game as a casualty.
+
+\textit{Example: A unit of 10 Orcs has lost 5 models in melee and must take a morale test. The unit takes a morale test and fails it, so it routs (because it only has half as many models left as it started the game with).}
+
+\vspace*{0.6cm}
+
+\begin{center}
+  \includegraphics [width=7cm]{GF_rulebook_page_11.png}
+\end{center}
+
+\vfill\null
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 12 ---- %%
+
+\section{Terrain}
+
+\begin{multicols}{2}
+
+\subsection{Terrain Rules}
+
+When setting up terrain, all players must agree on what terrain type rules each piece of terrain follows.
+
+This will make sure that you do not have any weird situations or misunderstandings during your game, and that things can proceed smoothly.
+
+Note that each piece of terrain may use multiple terrain type rules where it makes sense.
+
+\textit{Example: A piece of Forest terrain could count both as Cover as well as Difficult Terrain.}
+
+\subsection{Open Terrain}
+
+\textit{Grass Fields, Dirt Roads, Streets, etc.}
+
+Any surface that is not specifically defined as a type of terrain (like forests, buildings, rivers, etc.) counts as open terrain.
+
+Open terrain does not have any special rules, and any rules that affect terrain do not apply to open terrain.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_12_01.png}
+\end{center}
+
+\subsection{Impassable Terrain}
+
+\textit{Mountains, Canyons, Deep Water, etc.}
+
+Any surface that would stop models from moving through it counts as impassable terrain.
+
+Units may not ever move through impassable terrain under any circumstances.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_12_02.png}
+\end{center}
+
+\vfill\null
+
+\columnbreak
+
+\subsection{Elevation}
+
+\textit{Hills, Rooftops, Cliffs, etc.}
+
+Any terrain piece that is at least 3” taller than the surface of the table counts as elevation.
+
+When moving onto elevation, simply count the vertical movement as part of the unit’s regular movement.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_12_03.png}
+\end{center}
+
+\vfill\null
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 13 ---- %%
+
+\vspace*{0.2cm}
+
+\begin{multicols}{2}
+
+\subsection{Cover Terrain}
+
+\textit{Forests, Ruins, Sandbags, etc.}
+
+Terrain features that models can hide in or behind, or that could stop projectiles, count as cover terrain.
+
+If the majority of models in a unit are in or behind a piece of cover terrain, enemy units shooting at it get -1 to their hit rolls.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_13_01.png}
+\end{center}
+
+\subsection{Difficult Terrain}
+
+\textit{Woods, Mud, Rivers, etc.}
+
+Terrain features that hinder a model’s movement, or force them to slow down, count as difficult terrain.
+
+If any model in a unit moves in or through difficult terrain at any point of its move, then all models in the unit may not move more than 6” for that movement.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_13_02.png}
+\end{center}
+
+\vfill\null
+
+\columnbreak
+
+\subsection{Dangerous Terrain}
+
+\textit{Quicksand, Razor Wire, Mine Fields, etc.}
+
+Terrain features that could harm models, or outright kill them, count as dangerous terrain.
+
+If a model moves in or through dangerous terrain, then it must immediately take a dangerous terrain test.
+
+To take a dangerous terrain test, roll one die, and if the result is 1 the unit takes one automatic wound.
+
+If there are models with the Tough(X) rule in the unit, then you must roll X dice for them instead of only 1 die.
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_13_03.png}
+\end{center}
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 14 ---- %%
+
+\section{Special Rules}
+
+\begin{multicols}{2}
+
+\subsection{Rules Priority \& Stacking Effects}
+
+Most units have one or more special rules that affect the way they behave, and that sometimes go against the standard rules.
+
+Whenever you come across one of these situations, the special rule always takes precedence over the standard rules.
+
+Note that effects from multiple instances of the same special rule or spell don’t stack, unless it is a rule with (X) in its name, or unless it is specified otherwise.
+
+\begin{center}
+  \includegraphics [width=7cm]{GF_rulebook_page_14_01.png}
+\end{center}
+
+\subsection{Aircraft}
+
+These models fly far above the battlefield, and don’t physically interact with any other models or terrain, can’t seize objectives, and can’t be moved in base contact with.
+
+Units that shoot at Aircraft get -12” range and -1 to hit rolls.
+
+When an Aircraft is activated, it must move a full 18” to 36” in a straight line (without turning). If this move brings it off the table edge, then its activation ends immediately, and it must be placed back on any table edge you choose.
+
+Note that Aircraft must also complete their mandatory move, regardless of being Pinned or any other effects.
+
+\subsection{Ambush}
+
+You may choose not to deploy a model with this special rule with your army, but instead keep it off the table in reserve.
+
+At the beginning of any round after the first, you may place the model anywhere on the table, over 9” away from enemy units.
+
+If both players have units with Ambush, they must roll-off to see who deploys first, and then alternate in placing them.
+
+\subsection{AP(X)}
+
+Enemy units taking hits from weapons with this special rule get -X to Defense rolls.
+
+\subsection{Blast(X)}
+
+This weapon ignores cover and multiplies hits by X, however it can’t deal more than one hit per model in the target unit.
+
+\vfill\null
+
+\columnbreak
+
+\subsection{Deadly(X)}
+
+Whenever a model takes wounds from a weapon with this special rule, multiply the amount of wounds suffered by X.
+
+Note that wounds suffered by that model don’t carry over to other models if it is killed.
+
+\subsection{Fast}
+
+Models with this special rule move +2” when using Advance actions, and +4” when using Rush or Charge actions.
+
+\subsection{Fear}
+
+When in melee, units with this special rule count as having caused +D3 wounds when determining who won the combat.
+
+\subsection{Fearless}
+
+Models with this special rule get +1 to their morale test rolls.
+
+\subsection{Flying}
+
+Models with this special rule may move through other units and impassable terrain, and they may ignore terrain effects.
+
+\subsection{Furious}
+
+Whenever a model with this special rule charges an enemy, it gets +1 attack with a weapon of your choice.
+
+\subsection{Hero}
+
+Models with this special rule may be deployed as part of one other friendly unit at the beginning of the game.
+
+When rolling morale tests units may use the hero’s Quality value, and when rolling to block use the unt’s Defense value, until all non-hero models are killed.
+
+\subsection{Immobile}
+
+Models with this special rule may only use Hold actions.
+
+\vspace*{1cm}                               %% ---- remove if additional space is needed for text ----
+
+\begin{center}
+  \includegraphics [width=7cm]{GF_rulebook_page_14_02.png}
+\end{center}
+
+\vfill\null
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 15 ---- %%
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=south west,                %anchor is lower right corner of the graphic
+      xshift=2cm, %shifting around
+      yshift=1cm] 
+     at (current page.south west)       %lower right corner of the page
+     {\includegraphics[width=6.5cm]{GF_rulebook_page_15_01.png}}; 
+\end{tikzpicture}
+
+\vspace*{0.2cm}
+
+\begin{multicols*}{2}
+
+\subsection{Impact(X)}
+
+Whenever a model with this special rule charges, it deals X automatic melee hits, as long as it reaches striking range.
+
+\subsection{Indirect}
+
+Weapons with this special rule may shoot at enemies that are not in line of sight, and ignore cover from sight obstructions, however they get -1 to hit when shooting after moving.
+
+\subsection{Lock-On}
+
+Weapons with this special rule ignore all negative modifiers to hit rolls and range.
+
+\subsection{Poison}
+
+Whenever you roll an unmodified to hit result of 6 whilst firing this weapon, that hit is multiplied by 3.
+
+\subsection{Psychic(X)}
+
+Models with this special rule may cast one spell at any point during their activation, before attacking.
+
+To cast a spell, select one from the psychic’s army list, pick a target in line of sight, and roll D6+X. If the result is equal to or higher than the number in brackets, then you may resolve the spell’s effects.
+
+Enemy psychics within 18” and line of sight may also roll D6+X at the same time, and if the result is higher than that of the casting psychic, then the spell’s effects are blocked instead.
+
+Note that each psychic may only either try to cast a spell or try to block a spell each round.
+
+\subsection{Regeneration}
+
+Whenever this model takes wounds, roll one die for each. On a 5+ the wound is ignored.
+
+\subsection{Relentless}
+
+Whenever this model rolls an unmodified to hit result of 6 when shooting, it may roll 1 extra attack. This rule doesn’t apply to newly generated attacks.
+
+\subsection{Rending}
+
+Whenever you roll an unmodified to hit result of 6 whilst using this weapon, that hit counts as having AP(4), and it ignores the Regeneration rule.
+
+\vfill\null
+
+\columnbreak
+
+\begin{center}
+  \includegraphics [width=8cm]{GF_rulebook_page_15_02.png}
+\end{center}
+
+\subsection{Scout}
+
+Models with scout may deployed after all other units, and may immediately be moved by up to 12”, ignoring any terrain.
+If both players have units with Scout, they must roll-off to see who goes first, and then alternate in placing them.
+
+\subsection{Slow}
+
+Models with this special rule move -2” when using Advance actions, and -4” when using Rush or Charge actions.
+
+\subsection{Sniper}
+
+Models firing weapons with this special rule count as having Quality 2+ when rolling to hit, and the attacker may pick one model from the target unit as its target.
+Note that shooting is resolved as if the target was a unit of 1.
+
+\subsection{Stealth}
+
+Enemies targeting this unit get –1 to hit when shooting at it.
+
+\subsection{Strider}
+
+Models with this special rule treat Difficult Terrain as Open Terrain when moving (may move more than 6”).
+
+\subsection{Tough(X)}
+
+Models with this special rule must accumulate X wounds before being removed as a casualty.
+
+If a model with Tough joins a unit without it then you must remove regular models as casualties before starting to accumulate wounds on the model with Tough.
+
+When a unit with multiple Tough models takes wounds you must accumulate them on the tough model with most wounds until it is killed before starting to accumulate them on another.
+
+Note that heroes must still be assigned wounds last.
+
+\subsection{Transport(X)}
+
+Models with this special rule may transport up to X models in their cargo.
+
+Units may embark by moving into contact with the transport and embarked units may use any action to disembark but only move up to 6”. Units may also be deployed within a transport at the beginning of the game.
+
+If a unit is inside of a Transport when it is destroyed then it must take a Dangerous Terrain test, is immediately Pinned, and surviving models must be placed within 6” of the transport before it is removed.
+
+\end{multicols*}
+
+
+
+\newpage
+
+
+%% ---- Page 16 ---- %%
+
+\section{Support us on Patreon}
+
+\begin{multicols}{2}
+
+\subsection{Want more Grimdark Future?}
+
+If you like Grimdark Future and want to support us in making more awesome content, then you can donate to the project on Patreon here: \href{http://patreon.com/onepagerules}{patreon.com/onepagerules}
+
+By donating you will get access to a ton of extra content, exclusive updates, early access to WIP files, full rulebooks, point calculators, miniatures and much more.
+
+This project was made by gamers for gamers, and it can only exist thanks to the support of our awesome community.
+
+\textbf{Thank you for playing!}
+
+\vfill\null
+
+\columnbreak
+
+\subsection{Full Rulebook Contents}
+
+Whilst the basic rulebook provides you with all you need in order to play exciting games of Grimdark Future, there is even more content in the full rulebook, giving you access to a large set of advanced rules which you can use to customize the game to play the way you like.
+
+The full rulebook contains all of the following:
+
+
+\begin{itemize}
+  \item Terrain Placement Rules
+  \item Multiple Deployment Styles
+  \item Extra Missions
+  \item Side-Missions
+  \item Extra Actions
+  \item Rules for Solid Buildings
+  \item Random Events
+  \item Battlefield Conditions
+  \item Terrain \& Objective Effects
+  \item Fog of War Rules
+  \item Brutal Damage Rules
+  \item Command Points Rules
+  \item Suppression Rules
+  \item Rules for Multiplayer Games
+  \item Rules for Apocalyptic Games
+  \item Rules for Kitchen Table Games
+  \item Rules for Small-Scales \& Multi-Basing
+\end{itemize}
+
+\vfill\null
+
+\end{multicols}
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=south west,                %% anchor is lower left corner of the graphic
+      xshift=1.2cm,                     %% shifting around
+      yshift=1cm] 
+     at (current page.south west)       %% lower left corner of the page
+     {\includegraphics[width=8cm]{GF_rulebook_page_16.png}}; 
+\end{tikzpicture}
+
+
+\newpage
+
+
+%% ---- Page 17 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 18 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 19 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 20 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 21 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 22 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 23 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 24 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 25 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 26 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 27 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 28 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 29 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 30 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 31 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+%% ---- Page 32 ---- %%
+
+\section{}
+
+\begin{multicols}{2}
+
+
+
+\vfill\null
+
+\columnbreak
+
+
+
+\end{multicols}
+
+\newpage
+
+
+
+
+
+\end{document}
